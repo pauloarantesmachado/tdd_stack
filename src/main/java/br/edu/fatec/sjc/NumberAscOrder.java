@@ -20,7 +20,7 @@ public class NumberAscOrder <T extends Number & Comparable<T>> {
 
     public List<T> sort()
     {
-        if(numbers == null){
+        if(this.numbers.isEmpty()){
             throw new RuntimeException("List is null");
         }
         Collections.sort(this.numbers);

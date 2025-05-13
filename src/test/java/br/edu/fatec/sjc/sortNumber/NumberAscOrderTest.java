@@ -48,8 +48,6 @@ public class NumberAscOrderTest {
     @Test
     public void sortNumberAscListEmpty() throws StackEmptyException {
         numberAscOrder = new NumberAscOrder<>(stack);
-        List<Double> resultado = numberAscOrder.sort();
-        Assertions.assertTrue(resultado.isEmpty());
+        Assertions.assertThrows(RuntimeException.class, () -> numberAscOrder.sort());
     }
-
 }
